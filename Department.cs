@@ -14,7 +14,7 @@ namespace EasyOa.Model
         public string QPin { get; set; }
         public string JPin { get; set; }
         public int? Sort { get; set; }
-
+ 
         
     }
     
