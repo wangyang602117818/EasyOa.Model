@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\ModelBase.cs" />
-    <Compile Include="Department.cs" />
+    <Compile Include="ModelBase.cs" />
+    <Compile Include="Entities\Department.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
