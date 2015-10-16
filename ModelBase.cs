@@ -14,10 +14,10 @@ namespace EasyOa.Model
     public abstract class ModelBase<T>
     {
         internal ISqlMapper mapper = Mapper.Instance();
-        internal string table = typeof(T).Name;
+        internal string tablename = typeof(T).Name;
         public int Insert()
         {
-            return (int)mapper.Insert(this.table + ".Insert", this);
+            return (int)mapper.Insert(this.tablename + ".Insert", this);
         }
         /// <summary>
         /// 获取运行时sql

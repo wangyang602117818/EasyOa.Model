@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="Files" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="Files" type="EasyOa.Model.Files,EasyOa.Model"/>
+  </alias>
+  <statements>
+    <insert id="Files.Insert" parameterClass="Files" resultClass="int">
+      Insert into Files
+      (Scheme,Host,Port,LocalPath,FileName,FileSize,MD5,LogDate)
+      values
+      (#Scheme#,#Host#,#Port#,#LocalPath#,#FileName#,#FileSize#,#MD5#,#LogDate#)
+    </insert>
+    <select id="Files.FindById" parameterClass="int" resultClass="Files">
+      Select * from Files where Id=#Id#
+    </select>
+    <select id="Files.FindByMd5" parameterClass="string" resultClass="Files">
+      Seelct * from Files where MD5=#Md5#
+    </select>
+  </statements>
+</sqlMap>
