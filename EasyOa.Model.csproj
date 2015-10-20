@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Files.cs" />
+    <Compile Include="Entities\WebFile.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,8 +61,9 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Maps\Files.xml">
+    <Content Include="Maps\WebFile.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

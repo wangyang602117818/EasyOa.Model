@@ -9,7 +9,7 @@ namespace EasyOa.Model
     /// <summary>
     /// 基本属性类
     /// </summary>
-    public partial class Files : ModelBase<Files>
+    public partial class WebFile : ModelBase<WebFile>
     {
         public int Id { get; set; }
         public string Scheme { get; set; }
@@ -24,7 +24,7 @@ namespace EasyOa.Model
     /// <summary>
     /// 额外属性类
     /// </summary>
-    public partial class Files
+    public partial class WebFile
     {
         public string FileAddress
         {
@@ -34,15 +34,16 @@ namespace EasyOa.Model
     /// <summary>
     /// 方法类
     /// </summary>
-    public partial class Files
+    public partial class WebFile
     {
-        public Files FindById(int id)
+        public WebFile GetById(int id)
         {
-            return mapper.QueryForObject<Files>(tablename + ".FindById", id);
+            return mapper.QueryForObject<WebFile>(tablename + ".FindById", id);
         }
-        public Files FindByMd5(string md5)
+        public WebFile GetByMd5(string md5)
         {
-            return mapper.QueryForObject<Files>(tablename + ".FindByMd5", md5);
+            //string sql = GetSql(tablename + ".FindByMd5", md5);
+            return mapper.QueryForObject<WebFile>(tablename + ".FindByMd5", md5);
         }
     }
 }

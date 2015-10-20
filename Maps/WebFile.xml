@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="WebFile" xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alias>
+    <typeAlias alias="WebFile" type="EasyOa.Model.WebFile,EasyOa.Model"/>
+  </alias>
+  <statements>
+    <insert id="WebFile.Insert" parameterClass="WebFile" resultClass="int">
+      Insert into WebFile
+      (Scheme,Host,Port,LocalPath,FileName,FileSize,MD5,LogDate)
+      values
+      (#Scheme#,#Host#,#Port#,#LocalPath#,#FileName#,#FileSize#,#MD5#,#LogDate#)
+    </insert>
+    <select id="WebFile.FindById" parameterClass="int" resultClass="WebFile">
+      Select * from WebFile where Id=#Id#
+    </select>
+    <select id="WebFile.FindByMd5" parameterClass="string" resultClass="WebFile">
+      Select * from WebFile where MD5=#Md5#
+    </select>
+  </statements>
+</sqlMap>

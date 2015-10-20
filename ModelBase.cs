@@ -11,13 +11,17 @@ using System.Threading.Tasks;
 
 namespace EasyOa.Model
 {
-    public abstract class ModelBase<T>
+    public abstract class ModelBase<T> where T : new()
     {
         internal ISqlMapper mapper = Mapper.Instance();
         internal string tablename = typeof(T).Name;
         public int Insert()
         {
             return (int)mapper.Insert(this.tablename + ".Insert", this);
+        }
+        public static T Instance()
+        {
+            return new T();
         }
         /// <summary>
         /// 获取运行时sql
