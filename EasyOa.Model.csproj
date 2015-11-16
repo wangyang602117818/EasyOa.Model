@@ -48,6 +48,7 @@
     <Compile Include="Entities\WebFile.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Entities\Department.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
